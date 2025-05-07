@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8" />
+  <title>投注账本</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <h1>投注账本</h1>
+
+  <form id="entry-form">
+    <input type="text" id="item" placeholder="投注项目" required />
+    <input type="number" id="amount" placeholder="金额" required />
+    <select id="result">
+      <option value="win">赢</option>
+      <option value="lose">输</option>
+    </select>
+    <input type="date" id="date" required />
+    <button type="submit">添加记录</button>
+  </form>
+
+  <h2>记录列表</h2>
+  <ul id="entry-list"></ul>
+
+  <h2 id="summary">总盈亏：¥0</h2>
+
+  <h2>盈亏趋势图</h2>
+  <canvas id="lineChart"></canvas>
+
+  <h2>类型分布图</h2>
+  <canvas id="pieChart"></canvas>
+
+  <script src="script.js"></script>
+</body>
+</html>
